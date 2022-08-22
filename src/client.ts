@@ -16,7 +16,8 @@ export class MintableERC20Client extends Contract {
     amount: BigNumberish,
     sender: CLPublicKey,
     paymentAmount: BigNumberish,
-    signingKeys: Keys.AsymmetricKey[]
+    chainName: string,
+    signingKeys?: Keys.AsymmetricKey[]
   ) {
     const args = RuntimeArgs.fromMap({
       owner: new CLKey(owner),
@@ -26,7 +27,7 @@ export class MintableERC20Client extends Contract {
       "mint",
       args,
       sender,
-      "casper-test",
+      chainName,
       paymentAmount.toString(),
       signingKeys
     );

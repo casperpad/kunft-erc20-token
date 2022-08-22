@@ -1,5 +1,6 @@
 import { config } from "dotenv";
-config({ path: ".env" });
+// config({ path: ".env" });
+config({ path: ".env.production.local" });
 
 import { formatFixed } from "@ethersproject/bignumber";
 import { ERC20Client } from "casper-erc20-js-client";
@@ -37,6 +38,7 @@ const mint = async () => {
     TOKEN_SUPPLY!,
     KEYS.publicKey,
     "100000000",
+    CHAIN_NAME!,
     [KEYS]
   );
 
