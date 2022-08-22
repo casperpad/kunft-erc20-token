@@ -1,0 +1,33 @@
+{
+  "name": "kunft-erc20-token",
+  "version": "1.0.0",
+  "description": "KUNFT Token",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "deploy": "ts-node src/install.ts",
+    "mint": "ts-node src/mint.ts"
+  },
+  "keywords": [
+    "kunft-token",
+    "casper",
+    "smartcontract",
+    "erc20"
+  ],
+  "author": "gyroflaw",
+  "license": "ISC",
+  "dependencies": {
+    "casper-erc20-js-client": "^0.2.0",
+    "casper-js-client-helper": "^1.0.1",
+    "casper-js-sdk": "^2.9.1",
+    "dotenv": "^16.0.1",
+    "lodash": "^4.17.21",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.184",
+    "typescript": "^4.7.4"
+  }
+}
